@@ -1,0 +1,94 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: right; /* Align the navigation bar to the right */
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align the nav items to the right */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    margin: 20px;
+}
+
+.flex-box {
+    padding: 20px;
+    background-color:white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px;
+    flex: 1; /* Flexbox 1 takes all horizontal space */
+}
+.center{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+/* Add a 3x3 grid with rounded corners to the third flexbox */
+.flex-box:nth-child(3) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.flex-box:nth-child(1) {
+    background-color: rgb(97, 9, 132);
+}
+
+/* Style for each grid item */
+.grid-item {
+    background-color: rgb(53, 53, 123);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+.grid-item.original {
+    background-color: #3498db;}
+.grid-item.red {
+    background-color: red; /* Red background color when clicked */
+}
+.grid-item:hover {
+   cursor: pointer;
+   background-color:blue;
+}
+.grid-item.blue {
+    background-color: rgb(53, 53, 123); /* Blue background color when restoring */
+}
+
+
+
+/* Customize the flex layout for tablets */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* Flex items stack vertically */
+    }
+    /* Set width to 50% for Flexbox 2 and Flexbox 3 */
+    .flex-box:nth-child(2),
+    .flex-box:nth-child(3) {
+        width: 50%;
+    }
+   
+}
